@@ -28,7 +28,7 @@ DIRECTORYREPORT="/usr/local/www/speedtest"
 #
 # Caso queira criar o monitoramento do SpeedTest para outras Interfaces WAN, recomendo copiar
 # o bloco de variáveis abaixo e alterar o valor da Interface e o Número de referência.
-INTERFACE01="em0"
+INTERFACE01="vtnet1"
 SOURCE01=$(/sbin/ifconfig $INTERFACE01 | /usr/bin/grep -w inet | /usr/bin/sed -e 's/^[[:space:]]*//' | /usr/bin/cut -d ' ' -f2)
 DESCRIPTION01=$(/sbin/ifconfig $INTERFACE01 | /usr/bin/grep -w description | /usr/bin/sed -e 's/^[[:space:]]*//' | /usr/bin/cut -d ' ' -f2)
 PAGEREPORT01=$INTERFACE01.html
